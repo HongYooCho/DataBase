@@ -8,10 +8,10 @@
 * 여러 명이 동시에 접근할 수 있다. (concurrent access)  
 
 ### Schema and Instance
-__Logical Schema__: high level schema로 디비의 전반적인 로지컬 구조  
-__Physical Schema__: low level schema. 파일, 하드디스크에 어떻게 저장할 건지?  
-__Instance__: 실제로 데이터가 들어가있는 특정 상태.  
-__Physical data independence__: 로지컬 스키마가 바뀌든 피지컬 스키마가 바뀌든 데이터 저장되는 방식이 바뀌어도 __데이터는 그대로 "유지"되어야 한다.__  
+* __Logical Schema__: high level schema로 디비의 전반적인 로지컬 구조  
+* __Physical Schema__: low level schema. 파일, 하드디스크에 어떻게 저장할 건지?  
+* __Instance__: 실제로 데이터가 들어가있는 특정 상태.  
+* __Physical data independence__: 로지컬 스키마가 바뀌든 피지컬 스키마가 바뀌든 데이터 저장되는 방식이 바뀌어도 __데이터는 그대로 "유지"되어야 한다.__  
 
 __데이터 모델__ 에서는 데이터, 데이터 relationships, 데이터 semantic, 데이터 제약조건들을 어떻게 표현할지 정의하는 도구이다.  
 전세계적으로 relational model(70%)를 사용한다. - 예전부터 웬만하면 바뀌지 않음.  
@@ -25,19 +25,19 @@ __data dictionary__: 테이블의 구성, 구조 정보(metadate: data의 data)�
 * authorization: 데이터에 접근할 수 있는 사람  
 
 <pre><code>
-__CREATE TABLE__ DEPARTMENT
-    DEPT_NAME     __CHAR__(20),
-    BUILDING      __CHAR__(15),
-    BUDGET        __NUMERIC__(12, 2);
+CREATE TABLE DEPARTMENT
+    DEPT_NAME     CHAR(20),
+    BUILDING      CHAR(15),
+    BUDGET        NUMERIC(12, 2);
 </code></pre>  
 
 ### Data Manipulation Language (DML)  _(= query language)_  
 data 저장/검색에 사용된다.  
 declarative (non-procedural) 언어이다.  
 <pre><code>
-__SELECT__  INSTRUCTOR.ID, DEPARTMENT.DEPT_NAME
-__FROM__    INSTRUCTOR, DEPARTMENT
-__WHERE__   INSTRUCTOR.DEPT_NAME = DEPARTMENT.DEPT_NAME __AND__
+SELECT  INSTRUCTOR.ID, DEPARTMENT.DEPT_NAME
+FROM    INSTRUCTOR, DEPARTMENT
+WHERE   INSTRUCTOR.DEPT_NAME = DEPARTMENT.DEPT_NAME AND
             DEPARTMENT.BUDGET > 95000;
 </code></pre>  
 
