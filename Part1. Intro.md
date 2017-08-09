@@ -46,6 +46,7 @@ DDL과 DML을 아우르는 스테이트먼트. 데이터베이스에 어떤 작�
 
 ### Query Processing  
 Query Processor  
+: query 가 들어오면 어떻게 찾으면 좋을지 판단하여 결과를 주는 것. 질의 처리기  
 - Parsing and translation: compile  
 - Optimization: 쿼리 프로세싱 최적화(제일 빠르게)하기  
 - Evaluation: 데이터 실제로 읽어와 전달    
