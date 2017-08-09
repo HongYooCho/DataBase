@@ -21,7 +21,7 @@ entity set내의 모든 entity가 relationship에 참여해야 한다.
 * Partial participation (한 줄로 표시. default)  
 
 ex) 지도학생(total)이 없는 교수(partial)도 있다.  
-![total-and-partial](https://github.com/HongYooCho/DataBase/blob/master/image/Part4.%20E-R%20Model/total-and-partial.PNG)  
+![total-and-partial](https://github.com/HongYooCho/DataBase/blob/master/image/Part4.%20E-R%20Model/total-partial.PNG)  
 
 ### Weak entity set
 ![weak-entity-set](https://github.com/HongYooCho/DataBase/blob/master/image/Part4.%20E-R%20Model/weak-entity.png)  
@@ -29,5 +29,4 @@ ex) 지도학생(total)이 없는 교수(partial)도 있다.
 weak entity set은 혼자서는 불충분하기 때문에 무조건 total participation이 되어야 한다.  
 -> 자기가 dependent한 __strong entity set__ 의 primary key와 자기가 갖고 있는 partial key (__discriminator__)가 합쳐져야 한다!  
 --> 따라서 weak entity set는 dependent한 strong entity set(=indentifying entity set)이 반드시 하나는 존재한다.   
-_Weak entity set는 Existence dependent하다.  
-weak-strong 사이 Relationship을 identifying relationship이라고 한다. _  
+_Weak entity set는 Existence dependent하다. weak와 strong 사이의 Relationship을 identifying relationship이라고 한다. _  
