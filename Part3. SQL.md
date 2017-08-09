@@ -23,12 +23,13 @@ v: view 이름 <query expression>: SQL문
 
 * view update (insert, delete, update)는 안 되는 경우가 있다.  
 -> integrity constraints 때문에 발생한다.  
+
 ex)
 <pre><code>
 CREATE VIEW instructor_info AS
-SELECT ID, name, building
+SELECT ID, name, building
 FROM instructor, department
-WHERE instructor.dept_name= department.dept_name;
+WHERE instructor.dept_name = department.dept_name;
 </code></pre>
 -> 여기서 INSERT INTO instructor_info values('69987, 'White', 'Taylor');를 할 경우  
 1. instructor에 insert할지 department에 insert할지 모른다.  
