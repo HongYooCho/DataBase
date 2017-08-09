@@ -28,8 +28,8 @@ ex)
 <pre><code>
 CREATE VIEW instructor_info AS
 SELECT ID, name, building
-FROM instructor, department
-WHERE instructor.dept_name = department.dept_name;
+FROM instructor, department
+WHERE instructor.dept_name = department.dept_name;
 </code></pre>
 -> 여기서 INSERT INTO instructor_info values('69987, 'White', 'Taylor');를 할 경우  
 1. instructor에 insert할지 department에 insert할지 모른다.  
