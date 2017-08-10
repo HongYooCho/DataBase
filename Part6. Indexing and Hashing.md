@@ -7,10 +7,6 @@ index의 두 종류에는 _1. ordered indices_ 와 _2. hash indices_ 가 있다.
 _search key는 file에서 레코드를 찾는데 사용되는 attribute(s)이다._  
 
 
-### ordered indices  
-: index entries가 search-key value 순으로 저장되어 있다.  
-ex) B+ Tree, B Tree  
-
 * primary index(= clustering index): search-key의 index 순서대로 저장되어 있다.  
 primary index의 search key는 보통 primary key이다.  
   - index-sequential file: record(tuple)저장 순서가 primary index 순서  
@@ -20,10 +16,15 @@ primary index의 search key는 보통 primary key이다.
 * secondary index(= non-clustering index): 순차적으로 저장되어 있지 않다.  
   - 무조건 dense index이다.  
 
-### hashing indices  
+
+## ordered indices  
+: index entries가 search-key value 순으로 저장되어 있다.  
+ex) B+ Tree, B Tree  
+
+## hashing indices  
 hash index는 record pointer와 같이 search key로 구성된다.  
 hash indices는 항상 secondary indices이다.  
-### static hashing
+### Static hashing
 * bucket: 1개 이상의 record가 있는 저장 단위로 대게 disk block이다.  
 hash function을 이용하여 bucket을 나눌 수 있다.  
 - Worst case: 모든 search-key 값이 같은 bucket으로 들어갈 때 -> _bucket overflow가 발생할 수 있다._    
