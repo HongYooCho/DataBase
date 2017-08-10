@@ -20,7 +20,7 @@ ex) A→B와 B→C를 통해 A→C 유추가 가능하다. -> __F+ (A→B, B→C
 ### 2NF (Second Normal Form)  
 : relation R이 1NF이고 primary key에 속하지 않는 모든 attribute가 primary key에 __완전 함수 종속(FD)일 때__.    
 #### --> 부분 종속일 경우 분리한다.
-<p>
+<p><p>
 
 ### 3NF (Third Normal Form)  
 : 이행적 함수 종속(transitive FD)이 있을 경우 테이블을 쪼갠다. 다른 열의 값을 계산해서 얻을 수 있는 열은 제거한다.  
@@ -30,13 +30,13 @@ relation R이 2NF이고 primary key에 속하지 않는 모든 attribute가 prim
 _transitive FD란? A→B와 B→C가 성립되면 A→C도 성립한다. 이 때 C는 A에 transitive FD이라고 한다._  
 _transitive FD 제거하기: A→B AND B→C, THEN A→C_  
 _{A, B, C} --> {A, B}, {B, C}_   
-<p>
+<p><p>
 
 ### BCNF (Boyce-Codd Normal Form)
 : __모든 결정자(determinant)가 superkey__ 이면 R은 BCNF이다.  
 BCNF에 속하는 relation은 모두 3NF이다. -> BCNF는 강한 3NF이다.    
 하지만 1NF, 2NF, primary key, transitive FD 등 개념을 이용하지 않고 정의되기 때문에 3NF보다 간단하다. 복합속성 허용한다.  
-<p>
+<p><p>
 
 
 ```
