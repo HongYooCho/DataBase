@@ -3,6 +3,7 @@ index 파일은 __search-key + pointer__ 의 형태인 record(index entry)로 �
 index의 두 종류에는 _1. ordered indices_ 와 _2. hash indices_ 가 있다.  
 1. ordered indices: search key들이 sort된 순서로 저장되어 있다.  
 2. hash indices: hash function을 이용하여 buckets에 균등하게 분배되어 있다.  
+
 _search key는 file에서 레코드를 찾는데 사용되는 attribute(s)이다._  
 
 
@@ -26,10 +27,12 @@ hash indices는 항상 secondary indices이다.
 * bucket: 1개 이상의 record가 있는 저장 단위로 대게 disk block이다.  
 hash function을 이용하여 bucket을 나눌 수 있다.  
 - Worst case: 모든 search-key 값이 같은 bucket으로 들어갈 때 -> _bucket overflow가 발생할 수 있다._    
-- Ideal: uniform하고 random하게 나뉘어질 때  
+- Ideal case: uniform하고 random하게 나뉘어질 때  
 
 
 * bucket overflow를 줄이기 위해 __overflow bucket__ 을 쓴다. -> overflow chaining (linked list를 이용하여 연결된다.)  
 
 ### Dynamic hashing
 Extensible hashing - 다이나믹 해싱의 한 형태로 bucket 수가 다이나믹하게 바뀐다.  
+
+~~~~~~~~~ 수정 및 추가 환영 ~~~~~~~~~  
